@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Brands Carousel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .carousel-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            width: 240px;
+            background: #FFE4B5;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:nth-child(odd) {
+            background: #FFDAB9;
+        }
+
+        .card:nth-child(even) {
+            background: #FFFACD;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #FFDEAD;
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card-text {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            color: #FFC107;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .btn-custom {
+            background-color: #FF6347;
+            color: #fff;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 13px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff4b3a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="carousel-content">
+            <!-- Existing Brand Cards -->
+            <div class="card">
+                <img src="nike.jpg" class="card-img-top" alt="Nike">
+                <div class="card-body">
+                    <h5 class="card-title">Nike</h5>
+                    <p class="card-text">Trendy and durable sportswear.</p>
+                    <p class="price">₹3,500</p>
+                    <p class="rating">★ 4.7</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="adidas.jpg" class="card-img-top" alt="Adidas">
+                <div class="card-body">
+                    <h5 class="card-title">Adidas</h5>
+                    <p class="card-text">Quality athletic apparel.</p>
+                    <p class="price">₹4,200</p>
+                    <p class="rating">★ 4.6</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <!-- Additional Brand Cards -->
+            <div class="card">
+                <img src="gucci" class="card-img-top" alt="Gucci">
+                <div class="card-body">
+                    <h5 class="card-title">Gucci</h5>
+                    <p class="card-text">Luxury fashion and accessories.</p>
+                    <p class="price">₹12,000</p>
+                    <p class="rating">★ 4.9</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="loius.webp" class="card-img-top" alt="Louis Vuitton">
+                <div class="card-body">
+                    <h5 class="card-title">Louis Vuitton</h5>
+                    <p class="card-text">Iconic luxury brand.</p>
+                    <p class="price">₹15,000</p>
+                    <p class="rating">★ 4.8</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="handm.jpg" class="card-img-top" alt="Ralph Lauren">
+                <div class="card-body">
+                    <h5 class="card-title">H & M</h5>
+                    <p class="card-text">Classic American style.</p>
+                    <p class="price">₹5,500</p>
+                    <p class="rating">★ 4.7</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="armani.jpg" class="card-img-top" alt="Armani">
+                <div class="card-body">
+                    <h5 class="card-title">Armani</h5>
+                    <p class="card-text">Sophisticated Italian brand.</p>
+                    <p class="price">₹8,000</p>
+                    <p class="rating">★ 4.6</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="uniqlo.avif" class="card-img-top" alt="Uniqlo">
+                <div class="card-body">
+                    <h5 class="card-title">Uniqlo</h5>
+                    <p class="card-text">Minimalist and affordable.</p>
+                    <p class="price">₹2,300</p>
+                    <p class="rating">★ 4.5</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="zara.webp" class="card-img-top" alt="Burberry">
+                <div class="card-body">
+                    <h5 class="card-title">Zara</h5>
+                    <p class="card-text">British elegance and style.</p>
+                    <p class="price">₹10,000</p>
+                    <p class="rating">★ 4.8</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="northface.avif" class="card-img-top" alt="The North Face">
+                <div class="card-body">
+                    <h5 class="card-title">The North Face</h5>
+                    <p class="card-text">Outdoor and active gear.</p>
+                    <p class="price">₹4,500</p>
+                    <p class="rating">★ 4.7</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="levis.jpg" class="card-img-top" alt="Supreme">
+                <div class="card-body">
+                    <h5 class="card-title">Levi's</h5>
+                    <p class="card-text">Streetwear favorite.</p>
+                    <p class="price">₹6,500</p>
+                    <p class="rating">★ 4.9</p>
+                    <button class="btn btn-custom">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
